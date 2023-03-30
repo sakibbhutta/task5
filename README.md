@@ -76,3 +76,9 @@ services:
    ```
 10. the successfull output is:
 ![image](https://user-images.githubusercontent.com/126319802/228722322-e3181b3f-36fb-4ca6-b2e8-3b6cb5047df1.png)
+11. To install `Grafana`, run following command:
+```console
+$ docker run -d -p 3000:3000 grafana/grafana-enterprise
+ ```
+12. browse `localhost:3000` and enter `admin` as both username and password. 
+13. ![image](https://user-images.githubusercontent.com/126319802/228752592-655bf947-d094-4b19-a170-118d59cdc3fe.png)
