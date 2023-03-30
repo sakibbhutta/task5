@@ -49,3 +49,30 @@ services:
 
 7.  after making some changes in docker file and rebuilding image, below is the new message that is hown:
 ![image](https://user-images.githubusercontent.com/126319802/228720359-ab1c79a3-9816-4bd8-b215-75788ccd1ccd.png)
+8.  For scalling, `docker-compose.yml` is edited as followed:
+```yml
+version: '3'
+services:
+  web:
+   build: .
+   volumes:
+   - /var/lib/docker/volumes/my_volume/nginx:/usr/share/nginx/html
+
+  db:
+   image: mysql
+   volumes:
+   - /var/lib/docker/volumes/my_volume/mysql:/var/lib/mysql
+   environment:
+    MYSQL_ROOT_PASSWORD: mysql
+    MYSQL_DATABASE: mysql
+    MYSQL_USER: mysql
+    MYSQL_PASSWORD: mysql
+   ports:
+   - "8081:3306"
+   ```
+9. Run the following command:
+   ```console
+   $ docker-compose up -d --scale web=5
+   ```
+10. the successfull output is:
+![image](https://user-images.githubusercontent.com/126319802/228722322-e3181b3f-36fb-4ca6-b2e8-3b6cb5047df1.png)
