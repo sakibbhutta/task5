@@ -47,3 +47,5 @@ services:
 6.  Here is the output of `localhost:8080`
 ![image](https://user-images.githubusercontent.com/126319802/228718335-e746c2ee-ebd3-4cf0-9919-8ca444eb86e5.png)
 
+7.  after making some changes in docker file and rebuilding image, below is the new message that is hown:
+![image](https://user-images.githubusercontent.com/126319802/228720359-ab1c79a3-9816-4bd8-b215-75788ccd1ccd.png)
